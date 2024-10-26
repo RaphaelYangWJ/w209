@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 from datetime import datetime
-import altair as alt
 
 
 # import data
@@ -83,21 +82,17 @@ with col1:
             col3, col4 = st.columns(2)
             # 在第一列绘制房价散点图
             with col3:
-                st.write(f"{host_name} - Price Distributions")
-                scatter_chart = alt.Chart(filtered_data.reset_index()).mark_point(color='teal').encode(
-                    x=alt.X('index', title="Room Index"),
-                    y=alt.Y('price', title="Price ($)")
-                ).properties(width=300, height=300)
-                st.altair_chart(scatter_chart, use_container_width=True)
+                st.write(f"{host_name} - Price Distribution")
+                scatter_data = host_data.reset_index(drop=True)[['price']]
+                # scatter_data['index'] = scatter_data.index  # 添加一个索引列作为X轴
+                st.scatter_chart(scatter_data.rename(columns={'price': 'Price ($)'}))
 
             # 在第二列绘制评分直方图
             with col4:
-                st.write(f"{host_name} - Review Scores Distributions")
-                hist_chart = alt.Chart(filtered_data).mark_bar(color='salmon').encode(
-                    x=alt.X('review_scores_rating', bin=alt.Bin(maxbins=5), title="Score"),
-                    y=alt.Y('count()', title="Frequency")
-                ).properties(width=300, height=300)
-                st.altair_chart(hist_chart, use_container_width=True)
+                st.write(f"{host_name} - Reviews Score")
+                score_counts = host_data['review_scores_rating'].value_counts(bins=8).sort_index()
+                score_counts.index = score_counts.index.astype(str)
+                st.bar_chart(score_counts)
 
 # show result
 with col2:
