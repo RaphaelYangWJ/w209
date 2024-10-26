@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 from datetime import datetime
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
+import altair as alt
 
 
 # import data
@@ -22,7 +21,7 @@ with col1:
     # 2. host since slider
     host_since = pd.to_datetime(listing['host_since'])
     host_since_time = st.slider("Host since",value=datetime(host_since.min().year,host_since.min().month,host_since.min().day),format="MM-DD-YY",)
-    st.write("Start time:", host_since_time)
+    st.write("Host since:", host_since_time)
     # 3. Availability
     agree = st.checkbox("Available for booking")
     if agree:
@@ -47,10 +46,6 @@ st.write("Current Filtered items:", len(filtered_data))
 
 # map visuals
 with col2:
-    # Color map
-    norm = plt.Normalize(filtered_data['review_scores_rating'].min(), filtered_data['review_scores_rating'].max())
-    filtered_data['color'] = filtered_data['review_scores_rating'].apply(lambda x: cm.tab20(norm(x))[:3])  # 获取 RGB 值
-    filtered_data['color'] = filtered_data['color'].apply(lambda x: [int(255 * c) for c in x])
     map_style = 'mapbox://styles/mapbox/streets-v11'
     # pydeck
     st.pydeck_chart(pdk.Deck(
@@ -66,7 +61,7 @@ with col2:
                 'ScatterplotLayer',
                 data=filtered_data,
                 get_position='[longitude, latitude]',
-                get_color='color',  # 设置点的颜色
+
                 get_radius=60,
                 pickable=True,
             ),
@@ -85,25 +80,24 @@ with col1:
         if host_data.empty:
             st.write("No result for the host name. Please check the name.")
         else:
-            # sub-figs
-            fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5), gridspec_kw={'wspace': 0.3})
+            col3, col4 = st.columns(2)
+            # 在第一列绘制房价散点图
+            with col3:
+                st.write(f"{host_name} - Price Distributions")
+                scatter_chart = alt.Chart(filtered_data.reset_index()).mark_point(color='teal').encode(
+                    x=alt.X('index', title="Room Index"),
+                    y=alt.Y('price', title="Price ($)")
+                ).properties(width=300, height=300)
+                st.altair_chart(scatter_chart, use_container_width=True)
 
-            # price distributions
-            ax1.scatter(range(len(host_data)), host_data['price'], color='teal', edgecolor='black', alpha=0.7)
-            ax1.set_title(f"{host_name} - Prices Distributions", fontsize=14)
-            ax1.set_xlabel("Room Index", fontsize=12)
-            ax1.set_ylabel("Price ($)", fontsize=12)
-            ax1.grid(True, linestyle='--', alpha=0.6)
-
-            # scores hist
-            ax2.hist(host_data['review_scores_rating'], bins=5, color='salmon', edgecolor='black', alpha=0.7)
-            ax2.set_title(f"{host_name} - Review Scores", fontsize=14)
-            ax2.set_xlabel("Score", fontsize=12)
-            ax2.set_ylabel("Frequency", fontsize=12)
-            ax2.grid(True, linestyle='--', alpha=0.6)
-
-            # show graph
-            st.pyplot(fig)
+            # 在第二列绘制评分直方图
+            with col4:
+                st.write(f"{host_name} - Review Scores Distributions")
+                hist_chart = alt.Chart(filtered_data).mark_bar(color='salmon').encode(
+                    x=alt.X('review_scores_rating', bin=alt.Bin(maxbins=5), title="Score"),
+                    y=alt.Y('count()', title="Frequency")
+                ).properties(width=300, height=300)
+                st.altair_chart(hist_chart, use_container_width=True)
 
 # show result
 with col2:
