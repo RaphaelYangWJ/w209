@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UC Berkeley W209 Data Visualization Showcase</title>
+  <!-- Bulma Version 1-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/showcase.css" />
+  <script
+  src="https://kit.fontawesome.com/2828f7885a.js"
+  integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+  crossorigin="anonymous"
+  ></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
+    <style>
+    .box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Begin Preloader -->
+  <div class="preloader-wrapper">
+    <div class="preloader">
+      <img src="img/preloader.gif" alt="" />
+    </div>
+  </div>
+  <!-- End Preloader-->
+  <!-- Begin Scroll Up Button -->
+
+  <form action="#home">
+    <button id="toTop" title="Go to top">
+      <i class="fas fa-angle-up"></i>
+    </button>
+  </form>
+  <!-- End Scroll Up Button -->
+
+  <!-- Begin Header -->
+  <div class="header-wrapper" id="home">
+    <!-- Begin Hero -->
+    <section class="hero is-large">
+      <!-- Begin Mobile Nav -->
+      <nav class="navbar is-fixed-top is-transparent is-hidden-desktop">
+        <!-- Begin Burger Menu -->
+        <div class="navbar-brand">
+          <div class="navbar-burger burger" data-target="mobile-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- End Burger Menu -->
+        <div id="mobile-nav" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a class="navbar-item" href="#home">
+                Home
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a class="navbar-item" href="#about-me">
+                About Me
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a class="navbar-item" href="#services">
+                Services
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a class="navbar-item" href="#skills">
+                Skills
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a class="navbar-item" href="#my-work">
+                My Work
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a class="navbar-item" href="#contact">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Mobile Nav -->
+      <!-- Begin Hero Content-->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="subtitle">Hello! Welcome to</h1>
+          <h2 class="title">California Airbnb Viz</h2>
+          <h1 class="subtitle profession">UC Berkeley - W209 Data Visualization Group 3</h1>
+        </div>
+      </div>
+      <!-- End Hero Content-->
+      <!-- Begin Hero Menu -->
+      <div class="hero-foot ">
+        <div class="hero-foot--wrapper">
+          <div class="columns">
+            <div class="column is-12 hero-menu-desktop has-text-centered is-fixed-top">
+              <ul>
+                <li class="is-active">
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#about-me">About</a>
+                </li>
+                <li>
+                  <a href="#services">Our Goals</a>
+                </li>
+                <li>
+                  <a href="#datasource">Data Sources</a>
+                </li>
+                <li>
+                  <a href="#skills">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#my-work">Visualization Insights</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Hero Menu -->
+    </section>
+    <!-- End Hero -->
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Main Content -->
+  <div class="main-content">
+    <!-- Begin About Me Section -->
+    <div class="section-light about-me" id="about-me">
+      <div class="container">
+        <div class="column is-12 about-me">
+          <h1 class="title has-text-centered section-title">About</h1>
+        </div>
+        <div class="columns is-multiline">
+          <div
+          class="column is-9 has-vertically-aligned-content"
+          data-aos="fade-right"
+          >
+          <p class="is-larger">
+            <strong><font size="6">Welcome to Our Project !</font></strong></p>
+          <br />
+          <div><font size="4">We’re thrilled to introduce you to our innovative platform 
+            dedicated to unlocking valuable insights for Airbnb hosts and travelers alike.</font>
+          </div><br />
+          <div><font size="4">At the heart of our mission is a commitment to harnessing the power of data analysis and visualization. Our goal is twofold: to empower hosts with the tools and knowledge they need to elevate their listings and maximize their earnings, and to equip users and tourists with essential information for making informed, confident decisions about their accommodations.</font>
+          </div>
+          <br />
+          <p class="is-larger">
+            <strong><font size="5">What We Offer:</font></strong></p><br />
+            <ul>
+            <li><div><font size="4"><strong>-> For Travelers:</strong> Navigate the vast world of Airbnb with ease! Our intuitive visualizations provide a wealth of information, helping you find the perfect stay that meets your needs and preferences. From pricing trends to neighborhood insights, we’ve got you covered.</font>
+          </div><br /></li>
+            <li><div><font size="4"><strong>-> For Hosts:</strong> Discover actionable insights that will enhance your hosting experience, improve guest satisfaction, and boost your revenue. Our data-driven recommendations will guide you in optimizing your listings to stand out in a competitive market.</font>
+          </div></li>
+            </ul>
+          <div class="is-divider"></div>
+        </div>
+        <div class="column is-3 right-image " data-aos="fade-left">
+          <img
+          class="is-rounded"
+          src="../images/logo.webp"
+          alt=""
+          />
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End About Me Content -->
+
+<!-- Begin Services Content -->
+<div class="section-color services" id="services">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div
+      class="column is-12 about-me"
+      data-aos="fade-in"
+      data-aos-easing="linear"
+      >
+      <h1 class="title has-text-centered section-title">Our Goals</h1>
+<div class="columns">
+  <div class="column">
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>Empowering Hosts:</strong>
+          <br />
+            Our primary aim is to equip Airbnb hosts with actionable insights that enhance guest satisfaction and boost revenue. By providing detailed analytics, we help hosts refine their offerings and stand out in a competitive marketplace.
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>Guiding Travelers:</strong>
+          <br />
+            We strive to simplify the Airbnb experience for users by delivering essential market data and comparisons. Our visualizations empower travelers to make informed decisions, ensuring they find the perfect accommodation that meets their needs.
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+</div>
+<div class="column">
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>Data-Driven Decision Making:</strong>
+          <br />
+            We advocate for informed choices through data-driven strategies tailored for both hosts and guests. By leveraging analytics, we help optimize experiences for everyone involved in the Airbnb ecosystem and provide more details for decision making.
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>Interactive Exploration:</strong>
+          <br />
+            Our user-friendly dashboards are designed for intuitive data exploration, offering versatile filtering options that allow users to customize their experience. This interactivity enhances understanding and encourages insights into the Airbnb market.
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Services Content -->
+
+
+
+  <!-- Begin Data Source Content -->
+  <div class="main-content">
+    <!-- Begin About Me Section -->
+    <div class="section-light about-me" id="datasource">
+      <div class="container">
+        <div class="column is-12 about-me">
+          <h1 class="title has-text-centered section-title">Data Sources</h1>
+        </div>
+
+          <div><font size="4">The data used for this analysis is sourced from <a href="https://insideairbnb.com/get-the-data/" target="_blank">Inside Airbnb</a>, focusing on San Francisco, California, United States, as of 04 September, 2024. The datasets include detailed and summary information about Airbnb listings, calendars, reviews, and neighborhood information, enabling insights into pricing trends, seasonal fluctuations, and property types. </font>
+          </div>
+
+    </div>
+  </div>
+  <!-- End About Me Content -->
+
+
+<!-- Begin Skills Content -->
+<div class="section-light skills" id="skills">
+
+
+<div class='tableauPlaceholder' id='viz1732632830568' style='position: relative'><noscript><a href='#'><img alt='CALIFORNIA AIRBNB DATA DASHBOARD ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Assginment_Dashboards&#47;dashboard_only&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Final_Assginment_Dashboards&#47;dashboard_only' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Assginment_Dashboards&#47;dashboard_only&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-CN' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1732632830568');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.50)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
+<!--
+<div class="box has has-text-centered">
+<a href="https://forms.gle/Qr8Vq7a7oeZAW8L16", target="_blank">
+    <img src="../images/survey.png" alt="some_text" width="150" height="100">
+</a>
+
+</div>
+-->
+
+
+
+</div>
+<!-- End Skills Content -->
+<!-- Begin Work Content -->
+<div class="section-dark my-work" id="my-work">
+  <div class="container">
+    <div
+    class="columns is-multiline"
+    data-aos="fade-in"
+    data-aos-easing="linear"
+    >
+    <div class="column is-12">
+      <h1 class="title has-text-centered section-title">Visualization Insights</h1>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <!-- Button -->
+      <div class="column is-narrow">
+        <button class="button is-info" onclick="previousBox()"><<<</button>
+      </div>
+
+      <!-- Box container -->
+      <div class="column box-container">
+        <div class="box" id="box-1">
+          
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><font size="5">1. California Airbnb Data Visualization Dashboard</font></strong>
+          <br /><br />
+            This dashboard offers a comprehensive look at the California Airbnb market, enabling both hosts and users to make well-informed decisions based on location, property type, and pricing. It includes:
+        </p>
+        <ul>
+        <li><strong>Geomap of California:</strong> This interactive map visualizes Airbnb listings across various regions in California, enabling users to explore location-based options conveniently. It provides a clear view of the concentration and spread of listings by geographic area.</li>
+        <li><strong>Property Type Breakdowns:</strong> A heatmap offering insights into the distribution, average price, and average rating of various property types (such as entire homes, private rooms). This helps users quickly identify the most popular and highly rated property types, while also offering hosts a comparison for pricing and guest satisfaction.</li>
+        <li><strong>Median Price by Host Neighborhood: </strong> This section highlights the median price for listings in different neighborhoods, giving users a reference for typical pricing within various areas. It’s a helpful tool for tourists seeking budget-friendly options and for hosts aiming to competitively price their properties.</li>
+        <li><strong>Average Price at Room Type Level: </strong> This overview displays the average prices segmented by host status (superhost or not) and room type. It allows both hosts and guests to compare pricing across room categories, assisting in finding cost-effective or high-value options based on desired room types and host reputation.</li>
+        </ul>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+</div>
+<div class="box" id="box-2" style="display: none;">
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><font size="5">2. Price & Reviews Dashboard</font></strong>
+          <br /><br />
+            This dashboard focuses on the relationship between price and reviews, helping users and hosts understand how pricing correlates with guest satisfaction:
+        </p>
+        <ul>
+        <li><strong>Prices at Neighborhoods Level:</strong> This analysis examines price variations across different neighborhoods, enabling tourists to make budget-friendly choices and hosts to price their listings competitively. It helps both groups understand the cost landscape of various areas within California.</li>
+        <li><strong>Price and Reviews Linear Relationship:</strong> A line graph that explores the relationship between average price and the number of reviews over time, providing insight into how pricing may affect guest feedback and satisfaction. This visualization helps hosts see how adjusting prices could influence review patterns and ratings.</li>
+        <li><strong>Average Review Score Breakdown:</strong> This section provides a detailed breakdown of average review scores across essential metrics like cleanliness, communication, and location. Both guests and hosts can use this information to gauge satisfaction levels in various areas, helping guests find highly rated listings and hosts identify areas for improvement.</li>
+        <li><strong>Review Score Rating at Room Type Level:</strong> This visualization compares review scores across different room types (e.g., entire home, private room, shared room) on key satisfaction criteria. Travelers can use this comparison to find the most highly-rated room types, while hosts gain insight into how their room type ranks in guest satisfaction.</li>
+        </ul>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+
+        </div>
+        <div class="box" id="box-3" style="display: none;">
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><font size="5">3. Price Seasonality Dashboard</font></strong>
+          <br /><br />
+            This dashboard can guide guests in finding the best times and locations to book within their budget, and it provides hosts with data to strategically set prices throughout the year.
+        </p>
+        <ul>
+        <li><strong>Price Trends by Season:</strong> This dashboard illustrates average price trends across different months, showing the seasonal fluctuations in Airbnb listing prices in California.  The right side of the dashboard includes filters for various host attributes (Superhost status, neighborhood, host’s joining date, etc.), allowing a more granular view of pricing trends. By analyzing this data, hosts can adjust their pricing strategies according to high- and low-demand periods, while guests can identify the best times for affordable stays. </li>
+        <li><strong>Price Trends by Room Type:</strong> Users can view price trends segmented by room type (entire home/apartment, private room, hotel room, or shared room). This breakdown provides insights into how each room type influences pricing dynamics over time, helping both hosts and guests understand how listing type impacts seasonal pricing.</li>
+        </ul>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="column is-narrow">
+        <button class="button is-info" onclick="nextBox()">>>></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let currentBox = 1;
+  const totalBoxes = 3;
+
+  function showBox(boxNumber) {
+    for (let i = 1; i <= totalBoxes; i++) {
+      const box = document.getElementById(`box-${i}`);
+      box.style.display = (i === boxNumber) ? 'block' : 'none';
+    }
+  }
+
+  function previousBox() {
+    currentBox = (currentBox === 1) ? totalBoxes : currentBox - 1;
+    showBox(currentBox);
+  }
+
+  function nextBox() {
+    currentBox = (currentBox === totalBoxes) ? 1 : currentBox + 1;
+    showBox(currentBox);
+  }
+</script>
+    </div>
+  </div>
+</div>
+
+<div class='tableauPlaceholder' id='viz1732632905608' style='position: relative'><noscript><a href='#'><img alt='CALIFORNIA AIRBNB DATA DETAILED CHARTS ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Assginment_Individuals_Charts&#47;Individual_charts&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Final_Assginment_Individuals_Charts&#47;Individual_charts' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Assginment_Individuals_Charts&#47;Individual_charts&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-CN' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1732632905608');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.50)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+</div>
+<!-- End Work Content -->
+
+<!-- Begin Our Team Content -->
+<div class="section-color services" id="services">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div
+      class="column is-12 about-me"
+      data-aos="fade-in"
+      data-aos-easing="linear"
+      >
+      <h1 class="title has-text-centered section-title">Our Team</h1>
+        <div class="columns is-centered" style="padding: 2rem">
+                <div class="column">
+                  <div class="box">
+                    <article class="media">
+                      <div class="media-left">
+                        <figure class="image is-64x64">
+                          <img src="https://ca.slack-edge.com/T0WA5NWKG-U069237S8JY-4833ad97c861-512" alt="Image" />
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <div class="content">
+                          <p>
+                            <strong><font size="3">Vicky Liu</font></strong> 
+                            <small>vickylliu@berkeley.edu</small>
+                             <small><a href="https://www.linkedin.com/in/vicky-liu-6328b086/" target="_blank">Linkedin Profile</a></small>
+                          </p>
+                        </div>
+                        <nav class="level is-mobile">
+                          <div class="level-left">
+                            <a class="level-item" aria-label="reply">
+                              <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="retweet">
+                              <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="like">
+                              <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                    </article>
+                  </div>
+                                  </div>
+                <div class="column">
+                  <div class="box">
+                    <article class="media">
+                      <div class="media-left">
+                        <figure class="image is-64x64">
+                          <img src="https://ca.slack-edge.com/T0WA5NWKG-U0696TG2FDF-479992dfd3de-512" alt="Image" />
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <div class="content">
+                          <p>
+                            <strong><font size="3">Jiayue(Jo) Zhu</font></strong> 
+                            <small>jzhu868@berkeley.edu</small>
+                             <small><a href="https://www.linkedin.com/in/jiayue-zhu/" target="_blank">Linkedin Profile</a></small>
+                          </p>
+                        </div>
+                        <nav class="level is-mobile">
+                          <div class="level-left">
+                            <a class="level-item" aria-label="reply">
+                              <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="retweet">
+                              <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="like">
+                              <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="box">
+                    <article class="media">
+                      <div class="media-left">
+                        <figure class="image is-64x64">
+                          <img src="../images/photo2.jpg" alt="Image" />
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <div class="content">
+                          <p>
+                            <strong><font size="3">Weijie Yang</font></strong> 
+                            <small>raphaelyang1998@berkeley.edu</small>
+                             <small><a href="https://www.linkedin.com/in/raphaelyang0618/" target="_blank">Linkedin Profile</a></small>
+                          </p>
+                        </div>
+                        <nav class="level is-mobile">
+                          <div class="level-left">
+                            <a class="level-item" aria-label="reply">
+                              <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="retweet">
+                              <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="like">
+                              <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="box">
+                    <article class="media">
+                      <div class="media-left">
+                        <figure class="image is-64x64">
+                          <img src="../images/photo.jpg" alt="Image" />
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <div class="content">
+                          <p>
+                            <strong><font size="3">Siddharth Chandras</font></strong> 
+                            <small>sidchand@berkeley.edu</small>
+                             <small><a href="https://www.linkedin.com/in/siddharth-chandras/ " target="_blank">Linkedin Profile</a></small>
+                          </p>
+                        </div>
+                        <nav class="level is-mobile">
+                          <div class="level-left">
+                            <a class="level-item" aria-label="reply">
+                              <span class="icon is-small">
+                                <i class="fas fa-reply" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="retweet">
+                              <span class="icon is-small">
+                                <i class="fas fa-retweet" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                            <a class="level-item" aria-label="like">
+                              <span class="icon is-small">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Our Team Content -->
+
+
+
+</div>
+<!-- End Main Content -->
+
+<!-- Begin Footer -->
+<div class="footer">
+  <p>
+    <strong class="white">UC Berkeley</strong> W209 Data Visualization Group Project</a>
+  </p>
+</div>
+<!-- End Footer -->
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/showcase.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    easing: "ease-out",
+    duration: 800,
+  });
+</script>
+</body>
+</html>
